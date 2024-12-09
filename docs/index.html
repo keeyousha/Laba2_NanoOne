@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.3">
+<title>NanoOneTk API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin:1em 0}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>NanoOneTk</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="NanoOneTk.setup" href="setup.html">NanoOneTk.setup</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="NanoOneTk.NanoJoke"><code class="flex name class">
+<span>class <span class="ident">NanoJoke</span></span>
+<span>(</span><span>master=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A custom Tkinter widget combining a Label and a Button with a fun twist.</p>
+<p>This widget displays a label with text and a button. When the button is clicked,
+the label's text is updated to a random joke.</p>
+<p>Initialize the JokeWidget widget.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>master</code></strong> :&ensp;<code>Tk</code> or <code>Widget</code>, optional</dt>
+<dd>The parent widget.</dd>
+<dt><strong><code>**kwargs</code></strong></dt>
+<dd>Additional keyword arguments to configure the Frame widget.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NanoJoke(tk.Frame):
+    &#34;&#34;&#34;
+    A custom Tkinter widget combining a Label and a Button with a fun twist.
+
+    This widget displays a label with text and a button. When the button is clicked,
+    the label&#39;s text is updated to a random joke.
+    &#34;&#34;&#34;
+    
+    def __init__(self, master=None, **kwargs):
+        &#34;&#34;&#34;
+        Initialize the JokeWidget widget.
+
+        Args:
+            master (Tk or Widget, optional): The parent widget.
+            **kwargs: Additional keyword arguments to configure the Frame widget.
+        &#34;&#34;&#34;
+        super().__init__(master, **kwargs)
+        
+        # List of jokes
+        self.jokes = [
+            &#34;Программисты на работе общаются двумя фразами: «непонятно» и «вроде работает».&#34;,
+            &#34;Сколько программистов нужно, чтобы заменить лампочку? Ни одного, это проблема с оборудованием.&#34;,
+            &#34;От нечего делать бродил по форумам программистов, ответил на свой же собственный вопрос, заданный месяц назад.&#34;,
+            &#34;За каждым успешным программистом стоит женщина, которой не существует.&#34;,
+            &#34;Жил—был программист и было у него два сына — Антон и Неантон.&#34;
+        ]
+        
+        # Create and pack the label
+        self.label = tk.Label(self, text=&#34;Нажми на кнопку, чтобы увидеть шутку!&#34;)
+        self.label.pack(side=tk.TOP, padx=10, pady=10)
+        
+        # Create and pack the button
+        self.button = tk.Button(self, text=&#34;Показать шутку&#34;, command=self.show_joke)
+        self.button.pack(side=tk.BOTTOM, padx=10, pady=10)
+    
+    def show_joke(self):
+        &#34;&#34;&#34;
+        Display a random joke in the label.
+        &#34;&#34;&#34;
+        random_joke = random.choice(self.jokes)
+        self.label.config(text=random_joke)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="NanoOneTk.NanoJoke.show_joke"><code class="name flex">
+<span>def <span class="ident">show_joke</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Display a random joke in the label.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="NanoOneTk.NanoLabeledEntry"><code class="flex name class">
+<span>class <span class="ident">NanoLabeledEntry</span></span>
+<span>(</span><span>master=None, label_text='Label', **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A custom Tkinter widget combining a Label and an Entry field in a single frame.</p>
+<p>This widget allows for easy association of a label with an entry field and provides
+methods for getting and setting the entry's value.</p>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>label</code></strong> :&ensp;<code>tk.Label</code></dt>
+<dd>The label widget displayed next to the entry field.</dd>
+<dt><strong><code>entry</code></strong> :&ensp;<code>tk.Entry</code></dt>
+<dd>The entry field widget for user input.</dd>
+</dl>
+<p>Initialize the NanoLabeledEntry widget.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>master</code></strong> :&ensp;<code>Tk</code> or <code>Widget</code>, optional</dt>
+<dd>The parent widget.</dd>
+<dt><strong><code>label_text</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The text to display in the label. Defaults to "Label".</dd>
+<dt><strong><code>**kwargs</code></strong></dt>
+<dd>Additional keyword arguments to configure the Frame widget.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NanoLabeledEntry(tk.Frame):
+    &#34;&#34;&#34;
+    A custom Tkinter widget combining a Label and an Entry field in a single frame.
+
+    This widget allows for easy association of a label with an entry field and provides
+    methods for getting and setting the entry&#39;s value.
+
+    Attributes:
+        label (tk.Label): The label widget displayed next to the entry field.
+        entry (tk.Entry): The entry field widget for user input.
+    &#34;&#34;&#34;
+
+    def __init__(self, master=None, label_text=&#34;Label&#34;, **kwargs):
+        &#34;&#34;&#34;
+        Initialize the NanoLabeledEntry widget.
+
+        Args:
+            master (Tk or Widget, optional): The parent widget.
+            label_text (str, optional): The text to display in the label. Defaults to &#34;Label&#34;.
+            **kwargs: Additional keyword arguments to configure the Frame widget.
+        &#34;&#34;&#34;
+        super().__init__(master, **kwargs)
+        
+        # Create and pack the label
+        self.label = tk.Label(self, text=label_text)
+        self.label.pack(side=tk.LEFT, padx=5, pady=5)
+        
+        # Create and pack the entry
+        self.entry = tk.Entry(self)
+        self.entry.pack(side=tk.LEFT, padx=5, pady=5)
+
+    def get(self):
+        &#34;&#34;&#34;
+        Retrieve the current value from the entry field.
+
+        Returns:
+            str: The current text in the entry field.
+        &#34;&#34;&#34;
+        return self.entry.get()
+
+    def set(self, value):
+        &#34;&#34;&#34;
+        Set a new value in the entry field.
+
+        Args:
+            value (str): The text to insert into the entry field.
+        &#34;&#34;&#34;
+        self.entry.delete(0, tk.END)
+        self.entry.insert(0, value)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="NanoOneTk.NanoLabeledEntry.get"><code class="name flex">
+<span>def <span class="ident">get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieve the current value from the entry field.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>str</code></dt>
+<dd>The current text in the entry field.</dd>
+</dl></div>
+</dd>
+<dt id="NanoOneTk.NanoLabeledEntry.set"><code class="name flex">
+<span>def <span class="ident">set</span></span>(<span>self, value)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set a new value in the entry field.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>value</code></strong> :&ensp;<code>str</code></dt>
+<dd>The text to insert into the entry field.</dd>
+</dl></div>
+</dd>
+</dl>
+</dd>
+<dt id="NanoOneTk.NanoMoodlindicator"><code class="flex name class">
+<span>class <span class="ident">NanoMoodlindicator</span></span>
+<span>(</span><span>master=None, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A custom Tkinter widget combining a Label, Button, and Mood Indicator.</p>
+<p>This widget displays a label, a button, and a mood indicator that changes when
+the button is clicked, showing a mood from a predefined list in a sequential manner.</p>
+<p>Initialize the NanoMoodIndicator widget.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>master</code></strong> :&ensp;<code>Tk</code> or <code>Widget</code>, optional</dt>
+<dd>The parent widget.</dd>
+<dt><strong><code>**kwargs</code></strong></dt>
+<dd>Additional keyword arguments to configure the Frame widget.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NanoMoodlindicator(tk.Frame):
+    &#34;&#34;&#34;
+    A custom Tkinter widget combining a Label, Button, and Mood Indicator.
+
+    This widget displays a label, a button, and a mood indicator that changes when
+    the button is clicked, showing a mood from a predefined list in a sequential manner.
+    &#34;&#34;&#34;
+
+    def __init__(self, master=None, **kwargs):
+        &#34;&#34;&#34;
+        Initialize the NanoMoodIndicator widget.
+
+        Args:
+            master (Tk or Widget, optional): The parent widget.
+            **kwargs: Additional keyword arguments to configure the Frame widget.
+        &#34;&#34;&#34;
+        super().__init__(master, **kwargs)
+        
+        self.moods = [
+            &#34;Счастлив!&#34;,
+            &#34;Грустный...&#34;,
+            &#34;Злой!&#34;,
+            &#34;Устал...&#34;,
+            &#34;Энергичный!&#34;,
+            &#34;Без настроения...&#34;
+        ]
+        
+        self.current_mood_index = 0 
+        self.label = tk.Label(self, text=&#34;Нажми кнопку, чтобы изменить настроение!&#34;)
+        self.label.pack(side=tk.TOP, padx=10, pady=10)
+        self.mood_status = tk.Label(self, text=&#34;Настроение: Не определено&#34;, fg=&#34;gray&#34;)
+        self.mood_status.pack(side=tk.TOP, padx=10, pady=10)
+        self.button = tk.Button(self, text=&#34;Поменять настроение&#34;, command=self.change_mood)
+        self.button.pack(side=tk.BOTTOM, padx=10, pady=10)
+
+    def change_mood(self):
+        &#34;&#34;&#34;
+        Change the mood indicator to the next mood in the list.
+        &#34;&#34;&#34;
+        current_mood = self.moods[self.current_mood_index]
+        self.mood_status.config(text=f&#34;Настроение: {current_mood}&#34;)
+        
+        if current_mood == &#34;Счастлив!&#34;:
+            self.mood_status.config(fg=&#34;yellow&#34;)
+        elif current_mood == &#34;Грустный...&#34;:
+            self.mood_status.config(fg=&#34;blue&#34;)
+        elif current_mood == &#34;Злой!&#34;:
+            self.mood_status.config(fg=&#34;red&#34;)
+        elif current_mood == &#34;Устал...&#34;:
+            self.mood_status.config(fg=&#34;gray&#34;)
+        elif current_mood == &#34;Энергичный!&#34;:
+            self.mood_status.config(fg=&#34;green&#34;)
+        else:
+            self.mood_status.config(fg=&#34;purple&#34;)
+        
+        self.current_mood_index = (self.current_mood_index + 1) % len(self.moods)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="NanoOneTk.NanoMoodlindicator.change_mood"><code class="name flex">
+<span>def <span class="ident">change_mood</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Change the mood indicator to the next mood in the list.</p></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="NanoOneTk.setup" href="setup.html">NanoOneTk.setup</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="NanoOneTk.NanoJoke" href="#NanoOneTk.NanoJoke">NanoJoke</a></code></h4>
+<ul class="">
+<li><code><a title="NanoOneTk.NanoJoke.show_joke" href="#NanoOneTk.NanoJoke.show_joke">show_joke</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="NanoOneTk.NanoLabeledEntry" href="#NanoOneTk.NanoLabeledEntry">NanoLabeledEntry</a></code></h4>
+<ul class="">
+<li><code><a title="NanoOneTk.NanoLabeledEntry.get" href="#NanoOneTk.NanoLabeledEntry.get">get</a></code></li>
+<li><code><a title="NanoOneTk.NanoLabeledEntry.set" href="#NanoOneTk.NanoLabeledEntry.set">set</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="NanoOneTk.NanoMoodlindicator" href="#NanoOneTk.NanoMoodlindicator">NanoMoodlindicator</a></code></h4>
+<ul class="">
+<li><code><a title="NanoOneTk.NanoMoodlindicator.change_mood" href="#NanoOneTk.NanoMoodlindicator.change_mood">change_mood</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.3</a>.</p>
+</footer>
+</body>
+</html>
