@@ -1,11 +1,11 @@
 import unittest
 import tkinter as tk
-from NanoOneTk import NanoMoodIndicator  
+from NanoOneTk import NanoMoodlindicator 
 
-class TestNanoMoodIndicator(unittest.TestCase):
+class TestNanoMoodindicator(unittest.TestCase):
     def setUp(self):
         self.root = tk.Tk()
-        self.mood_indicator = NanoMoodIndicator(master=self.root)
+        self.mood_indicator = NanoMoodlindicator(master=self.root)
         self.mood_indicator.pack()
 
     def tearDown(self):

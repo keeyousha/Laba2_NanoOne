@@ -1,6 +1,6 @@
 from .NanoLabeledEntry import NanoLabeledEntry
 from .NanoJoke import NanoJoke
-from .NanoMoodlindicator import NanoMoodIndicator
+from .NanoMoodlindicator import NanoMoodlindicator
 
-__all__ = ["NanoLabeledEntry",  "NanoJoke", "NanoMoodIndicator"]
+__all__ = ["NanoLabeledEntry",  "NanoJoke", "NanoMoodlindicator"]
 

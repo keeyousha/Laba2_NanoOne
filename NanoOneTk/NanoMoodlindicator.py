@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class NanoMoodIndicator(tk.Frame):
+class NanoMoodlindicator(tk.Frame):
     """
     A custom Tkinter widget combining a Label, Button, and Mood Indicator.
 
