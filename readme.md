@@ -19,4 +19,4 @@ Installation instructions you can view at [package folder](https://github.com/ke
 
 ## License
 
-This package is distributed under the [MIT License](https://github.com/keeyousha/Laba2_NanoOne/blob/master/LICENSE)
+This package is distributed under the [MIT License](https://github.com/keeyousha/Laba2_NanoOne?tab=MIT-1-ov-file)
